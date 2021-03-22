@@ -1,0 +1,9 @@
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\bin\Debug\LocalEntities.dll
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\bin\Debug\LocalEntities.pdb
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\obj\Debug\LocalEntities.csprojAssemblyReference.cache
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\obj\Debug\LocalEntities.csproj.CoreCompileInputs.cache
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\obj\Debug\LocalEntities.csproj.CopyComplete
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\obj\Debug\LocalEntities.dll
+C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\LocalEntities\obj\Debug\LocalEntities.pdb

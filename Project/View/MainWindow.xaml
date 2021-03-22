@@ -1,0 +1,28 @@
+﻿<Window x:Class="Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vM="clr-namespace:Project.ViewModel"
+        xmlns:local="clr-namespace:Project" xmlns:Control="clr-namespace:Project.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Window.DataContext>
+        <vM:MainWindowViewModel></vM:MainWindowViewModel>
+    </Window.DataContext>
+    <Grid Background="#EEEEEE">
+        <StackPanel>
+            <DockPanel Margin="0,5,0,5" Height="40px">
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Доступные рейсы" BorderBrush="{x:Null}"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Войти в аккаунт" BorderBrush="{x:Null}"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Моментальное бронирование" BorderBrush="{x:Null}"></Button>
+                <Button Background="#00ADB5" Width="195" Content="Найти рейсы" BorderBrush="{x:Null}"></Button>
+            </DockPanel>
+            <ComboBox>
+                <Frame Height="145" Content="{Binding Tickets/}">
+
+                </Frame>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AviaProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="content" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="content" Type="String" MaxLength="2000" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="AviaProjectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Tickets" EntityType="AviaProjectModel.Tickets" />
+  </EntityContainer>
+  <EntityType Name="Tickets">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="StartTime" />
+      <PropertyRef Name="EndTime" />
+      <PropertyRef Name="AviaName" />
+      <PropertyRef Name="From" />
+      <PropertyRef Name="To" />
+      <PropertyRef Name="Price" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AviaName" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="From" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="To" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
