@@ -21,5 +21,7 @@ namespace Server.Base
         public string From { get; set; }
         public string To { get; set; }
         public int Price { get; set; }
+        public Nullable<bool> isBuyed { get; set; }
+        public Nullable<int> UserId { get; set; }
     }
 }

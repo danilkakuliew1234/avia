@@ -13,6 +13,6 @@
         <TextBlock Text="{Binding NewsName}" FontSize="20" Foreground="#EEEEEE" Margin="10,43,363,259" TextWrapping="Wrap"></TextBlock>
         <TextBlock Text="{Binding Content}" Foreground="#EEEEEE" Margin="10,106,363,100" TextWrapping="Wrap" FontFamily="Comic Sans MS">
         </TextBlock>
-        <Label Content="{Binding Date}" Foreground="#EEEEEE" Opacity="0.4" FontSize="15" Margin="10,260,613,71"></Label>
+        <Label Content="{Binding Date}" Foreground="#EEEEEE" Opacity="0.4" FontSize="15" Margin="10,321,613,10"></Label>
     </Grid>
 </Page>

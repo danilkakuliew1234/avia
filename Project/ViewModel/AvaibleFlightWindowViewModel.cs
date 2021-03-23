@@ -9,7 +9,7 @@ using Project.ViewModel.WindowServices;
 
 namespace Project.ViewModel
 {
-    class AvaibleFlightWindowViewModel : BaseViewModel
+    class AvaibleFlightWindowViewModel : icommand
     {
         public ICommand BuyTicket
         {
@@ -74,6 +74,7 @@ namespace Project.ViewModel
                 price = value;
             }
         }
+        public int ID { get; set; }
         private ICommand buyTicket;
         private DateTime startFlightTime;
         private DateTime endFlightTime;
@@ -84,13 +85,14 @@ namespace Project.ViewModel
 
         public AvaibleFlightWindowViewModel(Ticket ticket)
         {
-            BuyTicket = new Commands.BuyTicketCommand();
             StartFlightTime = ticket.StartTime;
             EndFlightTime = ticket.EndTime;
             AviaName = ticket.AviaName;
             From = ticket.From;
             To = ticket.To;
             Price = ticket.Price;
+            ID = ticket.ID;
+            BuyTicket = new Commands.BuyTicketCommand(ID);
         }
     }
 }

@@ -8,7 +8,7 @@ using LocalEntities;
 
 namespace Project.ViewModel
 {
-    class NewsViewModel : BaseViewModel
+    class NewsViewModel : icommand
     {
         public string NewsName
         {

@@ -37,5 +37,7 @@ namespace LocalEntities
 
         [JsonProperty("Price")]
         public int Price { get; set; }
+        [JsonProperty("id")]
+        public int ID { get; set; }
     }
 }

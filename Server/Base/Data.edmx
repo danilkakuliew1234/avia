@@ -24,20 +24,16 @@
         <EntityType Name="Tickets">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="StartTime" />
-            <PropertyRef Name="EndTime" />
-            <PropertyRef Name="AviaName" />
-            <PropertyRef Name="From" />
-            <PropertyRef Name="To" />
-            <PropertyRef Name="Price" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StartTime" Type="datetime" Nullable="false" />
           <Property Name="EndTime" Type="datetime" Nullable="false" />
           <Property Name="AviaName" Type="nchar" MaxLength="255" Nullable="false" />
           <Property Name="From" Type="nchar" MaxLength="255" Nullable="false" />
           <Property Name="To" Type="nchar" MaxLength="255" Nullable="false" />
           <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="isBuyed" Type="bit" />
+          <Property Name="UserId" Type="int" />
         </EntityType>
         <EntityContainer Name="Хранилище AviaProjectModelContainer">
           <EntitySet Name="News" EntityType="Self.News" store:Type="Tables" store:Schema="dbo">
@@ -56,7 +52,9 @@
     [Tickets].[AviaName] AS [AviaName], 
     [Tickets].[From] AS [From], 
     [Tickets].[To] AS [To], 
-    [Tickets].[Price] AS [Price]
+    [Tickets].[Price] AS [Price], 
+    [Tickets].[isBuyed] AS [isBuyed], 
+    [Tickets].[UserId] AS [UserId]
     FROM [dbo].[Tickets] AS [Tickets]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
@@ -83,12 +81,6 @@
         <EntityType Name="Tickets">
           <Key>
             <PropertyRef Name="id" />
-            <PropertyRef Name="StartTime" />
-            <PropertyRef Name="EndTime" />
-            <PropertyRef Name="AviaName" />
-            <PropertyRef Name="From" />
-            <PropertyRef Name="To" />
-            <PropertyRef Name="Price" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
@@ -97,6 +89,8 @@
           <Property Name="From" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
           <Property Name="To" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
           <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="isBuyed" Type="Boolean" />
+          <Property Name="UserId" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -117,6 +111,8 @@
           <EntitySetMapping Name="Tickets">
             <EntityTypeMapping TypeName="AviaProjectModel.Tickets">
               <MappingFragment StoreEntitySet="Tickets">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="isBuyed" ColumnName="isBuyed" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="To" ColumnName="To" />
                 <ScalarProperty Name="From" ColumnName="From" />

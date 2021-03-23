@@ -19,20 +19,16 @@
   <EntityType Name="Tickets">
     <Key>
       <PropertyRef Name="id" />
-      <PropertyRef Name="StartTime" />
-      <PropertyRef Name="EndTime" />
-      <PropertyRef Name="AviaName" />
-      <PropertyRef Name="From" />
-      <PropertyRef Name="To" />
-      <PropertyRef Name="Price" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StartTime" Type="datetime" Nullable="false" />
     <Property Name="EndTime" Type="datetime" Nullable="false" />
     <Property Name="AviaName" Type="nchar" MaxLength="255" Nullable="false" />
     <Property Name="From" Type="nchar" MaxLength="255" Nullable="false" />
     <Property Name="To" Type="nchar" MaxLength="255" Nullable="false" />
     <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="isBuyed" Type="bit" />
+    <Property Name="UserId" Type="int" />
   </EntityType>
   <EntityContainer Name="Хранилище AviaProjectModelContainer">
     <EntitySet Name="News" EntityType="Self.News" store:Type="Tables" store:Schema="dbo">
@@ -51,7 +47,9 @@
     [Tickets].[AviaName] AS [AviaName], 
     [Tickets].[From] AS [From], 
     [Tickets].[To] AS [To], 
-    [Tickets].[Price] AS [Price]
+    [Tickets].[Price] AS [Price], 
+    [Tickets].[isBuyed] AS [isBuyed], 
+    [Tickets].[UserId] AS [UserId]
     FROM [dbo].[Tickets] AS [Tickets]</DefiningQuery>
     </EntitySet>
   </EntityContainer>

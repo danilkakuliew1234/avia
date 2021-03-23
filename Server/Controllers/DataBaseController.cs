@@ -18,5 +18,21 @@ namespace Server.Controllers
         {
             return new AviaProjectEntities().Tickets.ToList();
         }
+        [HttpGet]
+        public bool BuyTicket(int ID, int UserId)
+        {
+            AviaProjectEntities aviaProjectEntities = new AviaProjectEntities();
+
+            IQueryable<Tickets> tickets = aviaProjectEntities.Tickets;
+
+            Tickets ticket = tickets.FirstOrDefault(elem => elem.id == ID);
+            ticket.isBuyed = true;
+            ticket.UserId = UserId;
+
+            aviaProjectEntities.SaveChanges();
+
+            if (aviaProjectEntities.SaveChanges() == 1) return true;
+            return false;
+        }
     }
 }

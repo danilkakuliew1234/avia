@@ -14,6 +14,8 @@
     <EntitySetMapping Name="Tickets">
       <EntityTypeMapping TypeName="AviaProjectModel.Tickets">
         <MappingFragment StoreEntitySet="Tickets">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="isBuyed" ColumnName="isBuyed" />
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="To" ColumnName="To" />
           <ScalarProperty Name="From" ColumnName="From" />

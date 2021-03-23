@@ -7,9 +7,10 @@ using System.Windows.Input;
 
 namespace Project.ViewModel.Commands
 {
-    class BuyTicketCommand : ICommand
+    class AvaibleFlightCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
+        private Action avaibleFlightMethod;
 
         public bool CanExecute(object parameter)
         {
@@ -18,12 +19,11 @@ namespace Project.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            //some code
+            avaibleFlightMethod();
         }
-
-        public BuyTicketCommand(int ID)
+        public AvaibleFlightCommand(Action avaibleFlightMethod)
         {
-
+            this.avaibleFlightMethod = avaibleFlightMethod;
         }
     }
 }

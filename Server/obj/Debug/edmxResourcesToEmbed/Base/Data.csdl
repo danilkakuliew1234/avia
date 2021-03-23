@@ -19,12 +19,6 @@
   <EntityType Name="Tickets">
     <Key>
       <PropertyRef Name="id" />
-      <PropertyRef Name="StartTime" />
-      <PropertyRef Name="EndTime" />
-      <PropertyRef Name="AviaName" />
-      <PropertyRef Name="From" />
-      <PropertyRef Name="To" />
-      <PropertyRef Name="Price" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
@@ -33,5 +27,7 @@
     <Property Name="From" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
     <Property Name="To" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
     <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="isBuyed" Type="Boolean" />
+    <Property Name="UserId" Type="Int32" />
   </EntityType>
 </Schema>

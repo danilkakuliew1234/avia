@@ -7,10 +7,11 @@ using Project.View;
 using LocalEntities;
 using System.Windows.Input;
 using Project.ViewModel.Commands;
+using System.Windows;
 
 namespace Project.ViewModel
 {
-    class MainWindowViewModel : BaseViewModel
+    class MainWindowViewModel : icommand
     {
         public ICommand NextPageCommand
         {
@@ -28,6 +29,42 @@ namespace Project.ViewModel
             {
                 OnPropertyChanged(nameof(BackPageCommand));
                 backPageCommand = value;
+            }
+        }
+        public ICommand AvaibleFlightsCommand
+        {
+            get => avaibleFlightCommand;
+            set
+            {
+                OnPropertyChanged(nameof(AvaibleFlightsCommand));
+                avaibleFlightCommand = value;
+            }
+        }
+        public ICommand NewsVisibilityCommand
+        {
+            get => newsVisibilityCommand;
+            set
+            {
+                OnPropertyChanged(nameof(NewsVisibilityCommand));
+                newsVisibilityCommand = value;
+            }
+        }
+        public Visibility AvaibleFlightVisibility
+        {
+            get => avaibleFlightVisibility;
+            set
+            {
+                OnPropertyChanged(nameof(AvaibleFlightVisibility));
+                avaibleFlightVisibility = value;
+            }
+        }
+        public Visibility NewsVisibility
+        {
+            get => newsVisibility;
+            set
+            {
+                OnPropertyChanged(nameof(NewsVisibility));
+                newsVisibility = value;
             }
         }
         public List<AvailableFlightWindow> Tickets
@@ -52,6 +89,10 @@ namespace Project.ViewModel
         private AvailableFlightWindow page;
         private ICommand nextPageCommand;
         private ICommand backPageCommand;
+        private ICommand avaibleFlightCommand;
+        private ICommand newsVisibilityCommand;
+        private Visibility avaibleFlightVisibility;
+        private Visibility newsVisibility;
         private int currentPage;
         public MainWindowViewModel()
         {
@@ -59,6 +100,8 @@ namespace Project.ViewModel
 
             NextPageCommand = new NextPageCommand(Next);
             BackPageCommand = new BackPageCommand(Back);
+            AvaibleFlightsCommand = new AvaibleFlightCommand(SetVisibilityFlights);
+            NewsVisibilityCommand = new NewsVisibilityCommand(SetVisibilityNews);
 
             WindowServices.IWindowService windowService = new WindowServices.WindowServices();
 
@@ -70,6 +113,9 @@ namespace Project.ViewModel
             }
 
             Page = Tickets[currentPage];
+
+            NewsVisibility = Visibility.Visible;
+            AvaibleFlightVisibility = Visibility.Collapsed;
         }
         private void Next()
         {
@@ -93,6 +139,22 @@ namespace Project.ViewModel
             } else if(currentPage == 0)
             {
                 Page = Tickets[currentPage];
+            }
+        }
+        private void SetVisibilityFlights()
+        {
+            if (AvaibleFlightVisibility == Visibility.Visible)
+            {
+                AvaibleFlightVisibility = Visibility.Collapsed;
+                NewsVisibility = Visibility.Visible;
+            }
+        }
+        private void SetVisibilityNews()
+        {
+            if (NewsVisibility == Visibility.Visible)
+            {
+                NewsVisibility = Visibility.Collapsed;
+                AvaibleFlightVisibility = Visibility.Visible;
             }
         }
     }

@@ -25,7 +25,7 @@
                 </DockPanel>
                 <DockPanel>
                     <Label VerticalAlignment="Top" FontSize="20" Foreground="#EEEEEE" Content="{Binding Price}" FontFamily="Comic Sans MS"/>
-                    <Button Foreground="#222831" BorderBrush="{x:Null}" Background="#00ADB5" FontFamily="Comic Sans MS" Margin="40,0,500,0">Купить билет</Button>
+                    <Button  Foreground="#222831" BorderBrush="{x:Null}" Background="#00ADB5" FontFamily="Comic Sans MS" Margin="40,0,500,0">Купить билет</Button>
                 </DockPanel>
             </StackPanel>
         </StackPanel>

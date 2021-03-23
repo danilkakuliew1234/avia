@@ -13,15 +13,16 @@
     <Grid Background="#EEEEEE">
         <StackPanel>
             <DockPanel Margin="0,5,0,5" Height="40px">
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Доступные рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Войти в аккаунт" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Моментальное бронирование" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
-                <Button Background="#00ADB5" Width="195" Content="Найти рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Command="{Binding AvaibleFlightsCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Доступные рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Войти в аккаунт" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Моментальное бронирование" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Command="{Binding NewsVisibilityCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Новости" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Width="155" Content="Найти рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
             </DockPanel>
-            <Grid Height="375">
+            <Grid Height="375" Visibility="{Binding AvaibleFlightVisibility}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="38*"/>
-                    <RowDefinition Height="38*"/>
+                    <RowDefinition Height="28*"/>
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <DockPanel>
@@ -34,6 +35,11 @@
                         
                     </Frame>
                 </StackPanel>
+            </Grid>
+            <Grid Visibility="{Binding NewsVisibility}">
+                <Frame Source="/Project;component/View/News.xaml">
+                    
+                </Frame>
             </Grid>
         </StackPanel>
     </Grid>

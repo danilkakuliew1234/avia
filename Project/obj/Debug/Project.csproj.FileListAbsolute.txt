@@ -23,3 +23,28 @@ C:\Users\Danya\OneDrive\Рабочий стол\Бронирование ави�
 C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\Project\obj\Debug\View\AvailableFlightWindow.g.cs
 C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\Project\obj\Debug\View\AvailableFlightWindow.baml
 C:\Users\Danya\OneDrive\Рабочий стол\Бронирование авиабилетов\Project\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\Project.exe.config
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\Project.exe
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\Project.pdb
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\LocalEntities.dll
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\LocalEntities.pdb
+C:\Users\Admin\Desktop\avia\Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AvailableFlightWindow.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\MainWindow.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\News.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\App.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project_MarkupCompile.cache
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project_MarkupCompile.lref
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AvailableFlightWindow.baml
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\MainWindow.baml
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\News.baml
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.g.resources
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csproj.CopyComplete
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.exe
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.pdb

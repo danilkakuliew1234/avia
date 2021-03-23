@@ -7,9 +7,10 @@ using System.Windows.Input;
 
 namespace Project.ViewModel.Commands
 {
-    class BuyTicketCommand : ICommand
+    class NewsVisibilityCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
+        private Action method;
 
         public bool CanExecute(object parameter)
         {
@@ -18,12 +19,11 @@ namespace Project.ViewModel.Commands
 
         public void Execute(object parameter)
         {
-            //some code
+            method();
         }
-
-        public BuyTicketCommand(int ID)
+        public NewsVisibilityCommand(Action method)
         {
-
+            this.method = method;
         }
     }
 }
