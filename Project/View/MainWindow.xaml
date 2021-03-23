@@ -13,16 +13,28 @@
     <Grid Background="#EEEEEE">
         <StackPanel>
             <DockPanel Margin="0,5,0,5" Height="40px">
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Доступные рейсы" BorderBrush="{x:Null}"></Button>
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Войти в аккаунт" BorderBrush="{x:Null}"></Button>
-                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Моментальное бронирование" BorderBrush="{x:Null}"></Button>
-                <Button Background="#00ADB5" Width="195" Content="Найти рейсы" BorderBrush="{x:Null}"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Доступные рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Войти в аккаунт" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Margin="0,0,5,0" Width="195" Content="Моментальное бронирование" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Background="#00ADB5" Width="195" Content="Найти рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
             </DockPanel>
-            <ComboBox>
-                <Frame Height="145" Content="{Binding Tickets/}">
-
-                </Frame>
-            </ComboBox>
+            <Grid Height="375">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="38*"/>
+                    <RowDefinition Height="38*"/>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <DockPanel>
+                        <Button FontFamily="Comic Sans MS" BorderBrush="{x:Null}" Background="#00ADB5" Width="390" Content="Предыдущий билет" Command="{Binding BackPageCommand}"/>
+                        <Button Height="70" FontFamily="Comic Sans MS" BorderBrush="{x:Null}" Background="#00ADB5" Margin="5,0,0,0" Width="390" Content="Следующий билет" Command="{Binding NextPageCommand}"/>
+                    </DockPanel>
+                </StackPanel>
+                <StackPanel Grid.Row="1" VerticalAlignment="Center">
+                    <Frame Content="{Binding Page}" NavigationUIVisibility="Hidden">
+                        
+                    </Frame>
+                </StackPanel>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>

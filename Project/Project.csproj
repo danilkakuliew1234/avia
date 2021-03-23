@@ -63,7 +63,9 @@
     <Compile Include="Model\GetTicketsModel.cs" />
     <Compile Include="ViewModel\AvaibleFlightWindowViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Commands\BackPageCommand.cs" />
     <Compile Include="ViewModel\Commands\BuyTicketCommand.cs" />
+    <Compile Include="ViewModel\Commands\NextPageCommand.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\NewsViewModel.cs" />
     <Compile Include="ViewModel\WindowServices\IWindowService.cs" />
