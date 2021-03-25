@@ -67,8 +67,10 @@
     <Compile Include="ViewModel\Commands\AvaibleFlightCommand.cs" />
     <Compile Include="ViewModel\Commands\BackPageCommand.cs" />
     <Compile Include="ViewModel\Commands\BuyTicketCommand.cs" />
+    <Compile Include="ViewModel\Commands\LoginUserCommand.cs" />
     <Compile Include="ViewModel\Commands\NewsVisibilityCommand.cs" />
     <Compile Include="ViewModel\Commands\NextPageCommand.cs" />
+    <Compile Include="ViewModel\LoginWindowViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\NewsViewModel.cs" />
     <Compile Include="ViewModel\WindowServices\IWindowService.cs" />
@@ -76,10 +78,17 @@
     <Compile Include="View\AvailableFlightWindow.xaml.cs">
       <DependentUpon>AvailableFlightWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
     </Compile>
     <Page Include="View\AvailableFlightWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

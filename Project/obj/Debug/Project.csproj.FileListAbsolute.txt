@@ -48,3 +48,5 @@ C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csproj.CoreCompileInputs.c
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.csproj.CopyComplete
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.exe
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.pdb
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.baml

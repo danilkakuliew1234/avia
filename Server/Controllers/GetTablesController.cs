@@ -1,14 +1,14 @@
-﻿using System;
+﻿using Server.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Server.Base;
 
 namespace Server.Controllers
 {
-    public class DataBaseController : ApiController
+    public class GetTablesController : ApiController
     {
         public IEnumerable<News> GetNews()
         {
@@ -17,6 +17,11 @@ namespace Server.Controllers
         public IEnumerable<Tickets> GetTickets(string id)
         {
             return new AviaProjectEntities().Tickets.ToList();
+
+        }
+        public IEnumerable<Cards> GetCards(string login)
+        {
+            return new AviaProjectEntities().Cards.Where(elem => elem.login == login).ToList();
         }
         [HttpGet]
         public bool BuyTicket(int ID, int UserId)

@@ -7,6 +7,8 @@
       <Diagram DiagramId="ad0568a9b7e84ec1bc8d856070e73b79" Name="Diagram1">
         <EntityTypeShape EntityType="AviaProjectModel.News" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AviaProjectModel.Tickets" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AviaProjectModel.Cards" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AviaProjectModel.Users" Width="1.5" PointX="2.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

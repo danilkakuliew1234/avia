@@ -40,4 +40,15 @@ namespace LocalEntities
         [JsonProperty("id")]
         public int ID { get; set; }
     }
+    public class Card
+    {
+        [JsonProperty("login")]
+        public string Login { get; set; }
+        [JsonProperty("numberaccount")]
+        public string NumberAccount { get; set; }
+        [JsonProperty("creditcardnumber")]
+        public string CreditCardNumber { get; set; }
+        [JsonProperty("validityperiod")]
+        public string ValidityPeriod { get; set; }
+    }
 }

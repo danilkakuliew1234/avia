@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Project.ViewModel
 {
-    class MainWindowViewModel : icommand
+    class MainWindowViewModel : BaseViewModel
     {
         public ICommand NextPageCommand
         {
@@ -47,6 +47,15 @@ namespace Project.ViewModel
             {
                 OnPropertyChanged(nameof(NewsVisibilityCommand));
                 newsVisibilityCommand = value;
+            }
+        }
+        public ICommand LoginUserCommand
+        {
+            get => loginUserCommand;
+            set
+            {
+                OnPropertyChanged(nameof(LoginUserCommand));
+                loginUserCommand = value;
             }
         }
         public Visibility AvaibleFlightVisibility
@@ -91,6 +100,7 @@ namespace Project.ViewModel
         private ICommand backPageCommand;
         private ICommand avaibleFlightCommand;
         private ICommand newsVisibilityCommand;
+        private ICommand loginUserCommand;
         private Visibility avaibleFlightVisibility;
         private Visibility newsVisibility;
         private int currentPage;
@@ -102,6 +112,7 @@ namespace Project.ViewModel
             BackPageCommand = new BackPageCommand(Back);
             AvaibleFlightsCommand = new AvaibleFlightCommand(SetVisibilityFlights);
             NewsVisibilityCommand = new NewsVisibilityCommand(SetVisibilityNews);
+            LoginUserCommand = new LoginUserCommand();
 
             WindowServices.IWindowService windowService = new WindowServices.WindowServices();
 

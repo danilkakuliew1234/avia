@@ -15,6 +15,8 @@
   <EntityContainer Name="AviaProjectEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="News" EntityType="Self.News" />
     <EntitySet Name="Tickets" EntityType="AviaProjectModel.Tickets" />
+    <EntitySet Name="Cards" EntityType="AviaProjectModel.Cards" />
+    <EntitySet Name="Users" EntityType="AviaProjectModel.Users" />
   </EntityContainer>
   <EntityType Name="Tickets">
     <Key>
@@ -29,5 +31,43 @@
     <Property Name="Price" Type="Int32" Nullable="false" />
     <Property Name="isBuyed" Type="Boolean" />
     <Property Name="UserId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Cards">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="login" />
+      <PropertyRef Name="numberaccount" />
+      <PropertyRef Name="creditcardnumber" />
+      <PropertyRef Name="validityperiod" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="numberaccount" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="creditcardnumber" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="validityperiod" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="firstname" />
+      <PropertyRef Name="lastname" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="floor" />
+      <PropertyRef Name="dateofbirth" />
+      <PropertyRef Name="phone" />
+      <PropertyRef Name="login" />
+      <PropertyRef Name="password" />
+      <PropertyRef Name="mail" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="floor" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="dateofbirth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+    <Property Name="mail" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
   </EntityType>
 </Schema>

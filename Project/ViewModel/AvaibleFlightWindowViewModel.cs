@@ -9,7 +9,7 @@ using Project.ViewModel.WindowServices;
 
 namespace Project.ViewModel
 {
-    class AvaibleFlightWindowViewModel : icommand
+    class AvaibleFlightWindowViewModel : BaseViewModel
     {
         public ICommand BuyTicket
         {

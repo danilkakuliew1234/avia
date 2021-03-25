@@ -27,5 +27,7 @@ namespace Server.Base
     
         public virtual DbSet<News> News { get; set; }
         public virtual DbSet<Tickets> Tickets { get; set; }
+        public virtual DbSet<Cards> Cards { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

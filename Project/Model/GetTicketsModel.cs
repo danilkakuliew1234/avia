@@ -14,7 +14,7 @@ namespace Project.Model
     {
         public List<Ticket> GetTickets()
         {
-            WebRequest request = WebRequest.Create($"{SERVER}/api/DataBase/1");
+            WebRequest request = WebRequest.Create($"{SERVER}/api/GetTables/1");
 
             WebResponse response = request.GetResponse();
 

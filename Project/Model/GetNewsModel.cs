@@ -14,7 +14,7 @@ namespace Project.Model
     {
         public List<News> GetNews()
         {
-            WebRequest request = WebRequest.Create($"{SERVER}/api/DataBase");
+            WebRequest request = WebRequest.Create($"{SERVER}/api/GetTables");
 
             WebResponse response = request.GetResponse();
 

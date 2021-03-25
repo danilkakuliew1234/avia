@@ -8,7 +8,7 @@ using System.Windows;
 
 namespace Project.ViewModel
 {
-    class icommand : INotifyPropertyChanged
+    class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propName)
