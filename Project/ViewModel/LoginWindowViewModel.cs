@@ -16,8 +16,8 @@ namespace Project.ViewModel
             get => login;
             set
             {
-                OnPropertyChanged(nameof(Login));
                 login = value;
+                OnPropertyChanged(nameof(Login));
             }
         }
         public string Password
@@ -25,8 +25,8 @@ namespace Project.ViewModel
             get => password;
             set
             {
-                OnPropertyChanged(nameof(Password));
                 password = value;
+                OnPropertyChanged(nameof(Password));
             }
         }
         public bool IsLoggined
@@ -40,8 +40,8 @@ namespace Project.ViewModel
                     mainWindowViewModel.Login = Login;
                     loginWindow.Close();
                 }
-                OnPropertyChanged(nameof(IsLoggined));
                 isLoggined = value;
+                OnPropertyChanged(nameof(IsLoggined));
             }
         }
         public ICommand LoginCommand

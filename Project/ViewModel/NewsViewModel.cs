@@ -15,8 +15,8 @@ namespace Project.ViewModel
             get => newsName;
             set
             {
-                OnPropertyChanged(nameof(NewsName));
                 newsName = value;
+                OnPropertyChanged(nameof(NewsName));
             }
         }
         public string Content
@@ -24,8 +24,8 @@ namespace Project.ViewModel
             get => content;
             set
             {
-                OnPropertyChanged(nameof(Content));
                 content = value;
+                OnPropertyChanged(nameof(Content));
             }
         }
         public DateTime Date
@@ -33,8 +33,8 @@ namespace Project.ViewModel
             get => date;
             set
             {
-                OnPropertyChanged(nameof(Date));
                 date = value;
+                OnPropertyChanged(nameof(Date));
             }
         }
         private string newsName;

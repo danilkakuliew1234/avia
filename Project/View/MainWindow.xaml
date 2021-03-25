@@ -6,7 +6,7 @@
         xmlns:vM="clr-namespace:Project.ViewModel"
         xmlns:local="clr-namespace:Project" xmlns:Control="clr-namespace:Project.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
     <Window.DataContext>
         <vM:MainWindowViewModel></vM:MainWindowViewModel>
     </Window.DataContext>

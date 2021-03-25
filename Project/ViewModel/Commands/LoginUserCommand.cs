@@ -16,12 +16,12 @@ namespace Project.ViewModel.Commands
         private MainWindowViewModel mainWindowViewModel;
         public bool CanExecute(object parameter)
         {
-            return true;
+            return mainWindowViewModel.Authorized == true ? false : true;
         }
 
         public void Execute(object parameter)
         {
-            if(loginWindow == null)
+            if(loginWindow == null && mainWindowViewModel.Authorized == false)
             {
                 IWindowService windowService = new WindowServices.WindowServices();
                 loginWindow = windowService.ShowWindow<LoginWindow>() as LoginWindow;

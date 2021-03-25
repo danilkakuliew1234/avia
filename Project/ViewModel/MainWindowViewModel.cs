@@ -18,8 +18,8 @@ namespace Project.ViewModel
             get => nextPageCommand;
             set
             {
-                OnPropertyChanged(nameof(NextPageCommand));
                 nextPageCommand = value;
+                OnPropertyChanged(nameof(NextPageCommand));
             }
         }
         public ICommand BackPageCommand
@@ -27,8 +27,8 @@ namespace Project.ViewModel
             get => backPageCommand;
             set
             {
-                OnPropertyChanged(nameof(BackPageCommand));
                 backPageCommand = value;
+                OnPropertyChanged(nameof(BackPageCommand));
             }
         }
         public ICommand AvaibleFlightsCommand
@@ -36,8 +36,8 @@ namespace Project.ViewModel
             get => avaibleFlightCommand;
             set
             {
-                OnPropertyChanged(nameof(AvaibleFlightsCommand));
                 avaibleFlightCommand = value;
+                OnPropertyChanged(nameof(AvaibleFlightsCommand));
             }
         }
         public ICommand NewsVisibilityCommand
@@ -45,8 +45,8 @@ namespace Project.ViewModel
             get => newsVisibilityCommand;
             set
             {
-                OnPropertyChanged(nameof(NewsVisibilityCommand));
                 newsVisibilityCommand = value;
+                OnPropertyChanged(nameof(NewsVisibilityCommand));
             }
         }
         public ICommand LoginUserCommand
@@ -54,8 +54,8 @@ namespace Project.ViewModel
             get => loginUserCommand;
             set
             {
-                OnPropertyChanged(nameof(LoginUserCommand));
                 loginUserCommand = value;
+                OnPropertyChanged(nameof(LoginUserCommand));
             }
         }
         public Visibility AvaibleFlightVisibility
@@ -63,8 +63,8 @@ namespace Project.ViewModel
             get => avaibleFlightVisibility;
             set
             {
-                OnPropertyChanged(nameof(AvaibleFlightVisibility));
                 avaibleFlightVisibility = value;
+                OnPropertyChanged(nameof(AvaibleFlightVisibility));
             }
         }
         public Visibility NewsVisibility
@@ -72,8 +72,8 @@ namespace Project.ViewModel
             get => newsVisibility;
             set
             {
-                OnPropertyChanged(nameof(NewsVisibility));
                 newsVisibility = value;
+                OnPropertyChanged(nameof(NewsVisibility));
             }
         }
         public List<AvailableFlightWindow> Tickets
@@ -81,8 +81,8 @@ namespace Project.ViewModel
             get => tickets;
             set
             {
-                OnPropertyChanged(nameof(Tickets));
                 tickets = value;
+                OnPropertyChanged(nameof(Tickets));
             }
         }
         public AvailableFlightWindow Page
@@ -90,8 +90,8 @@ namespace Project.ViewModel
             get => page;
             set
             {
-                OnPropertyChanged(nameof(Page));
                 page = value;
+                OnPropertyChanged(nameof(Page));
             }
         }
         public bool Authorized
@@ -99,8 +99,8 @@ namespace Project.ViewModel
             get => authorized;
             set
             {
-                OnPropertyChanged(nameof(Authorized));
                 authorized = value;
+                OnPropertyChanged(nameof(Authorized));
             }
         }
         public string Login
@@ -108,8 +108,8 @@ namespace Project.ViewModel
             get => login;
             set
             {
+                login = $"Здравствуйте, {value}";
                 OnPropertyChanged(nameof(Login));
-                login = value;
             }
         }
         private List<AvailableFlightWindow> tickets = new List<AvailableFlightWindow>();
@@ -167,25 +167,22 @@ namespace Project.ViewModel
             {
                 Page = Tickets[currentPage];
                 currentPage--;
-            } else if(currentPage == 0)
-            {
-                Page = Tickets[currentPage];
             }
         }
         private void SetVisibilityFlights()
-        {
-            if (AvaibleFlightVisibility == Visibility.Visible)
-            {
-                AvaibleFlightVisibility = Visibility.Collapsed;
-                NewsVisibility = Visibility.Visible;
-            }
-        }
-        private void SetVisibilityNews()
         {
             if (NewsVisibility == Visibility.Visible)
             {
                 NewsVisibility = Visibility.Collapsed;
                 AvaibleFlightVisibility = Visibility.Visible;
+            }
+        }
+        private void SetVisibilityNews()
+        {
+            if (AvaibleFlightVisibility == Visibility.Visible)
+            {
+                AvaibleFlightVisibility = Visibility.Collapsed;
+                NewsVisibility = Visibility.Visible;
             }
         }
     }

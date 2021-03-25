@@ -16,8 +16,8 @@ namespace Project.ViewModel
             get => buyTicket;
             set
             {
-                OnPropertyChanged(nameof(BuyTicket));
                 buyTicket = value;
+                OnPropertyChanged(nameof(BuyTicket));
             }
         }
         public DateTime StartFlightTime
@@ -25,8 +25,8 @@ namespace Project.ViewModel
             get => startFlightTime;
             set
             {
-                OnPropertyChanged(nameof(StartFlightTime));
                 startFlightTime = value;
+                OnPropertyChanged(nameof(StartFlightTime));
             }
         }
         public DateTime EndFlightTime
@@ -34,8 +34,8 @@ namespace Project.ViewModel
             get => endFlightTime;
             set
             {
-                OnPropertyChanged(nameof(EndFlightTime));
                 endFlightTime = value;
+                OnPropertyChanged(nameof(EndFlightTime));
             }
         }
         public string AviaName
@@ -43,8 +43,8 @@ namespace Project.ViewModel
             get => aviaName;
             set
             {
-                OnPropertyChanged(nameof(AviaName));
                 aviaName = value;
+                OnPropertyChanged(nameof(AviaName));
             }
         }
         public string From
@@ -52,8 +52,8 @@ namespace Project.ViewModel
             get => from;
             set
             {
-                OnPropertyChanged(nameof(From));
                 from = value;
+                OnPropertyChanged(nameof(From));
             }
         }
         public string To
@@ -61,8 +61,8 @@ namespace Project.ViewModel
             get => to;
             set
             {
-                OnPropertyChanged(nameof(To));
                 to = value;
+                OnPropertyChanged(nameof(To));
             }
         }
         public int Price
@@ -70,8 +70,8 @@ namespace Project.ViewModel
             get => price;
             set
             {
-                OnPropertyChanged(nameof(Price));
                 price = value;
+                OnPropertyChanged(nameof(Price));
             }
         }
         public int ID { get; set; }
