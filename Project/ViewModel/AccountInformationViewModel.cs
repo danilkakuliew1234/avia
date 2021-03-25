@@ -73,12 +73,12 @@ namespace Project.ViewModel
 
         public AccountInformationViewModel(LocalEntities.AccountInformation accountInformation)
         {
-            FirstName = accountInformation.FirstName;
-            LastName = accountInformation.LastName;
-            Name = accountInformation.Name;
-            AccountNumber = accountInformation.AccountNumber;
-            CardNumber = accountInformation.CardNumber;
-            EndDate = accountInformation.EndDate;
+            FirstName = accountInformation.FirstName.Trim();
+            LastName = accountInformation.LastName.Trim();
+            Name = accountInformation.Name.Trim();
+            AccountNumber = accountInformation.AccountNumber.Trim();
+            CardNumber = accountInformation.CardNumber.Trim();
+            EndDate = accountInformation.EndDate.Trim();
         }
     }
 }

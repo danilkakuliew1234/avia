@@ -59,6 +59,15 @@ namespace Project.ViewModel
                 OnPropertyChanged(nameof(LoginUserCommand));
             }
         }
+        public ICommand AccountInformationVisibilityCommand
+        {
+            get => accountInformationVisibilityCommand;
+            set
+            {
+                accountInformationVisibilityCommand = value;
+                OnPropertyChanged(nameof(AccountInformationVisibilityCommand));
+            }
+        }
         public Visibility AvaibleFlightVisibility
         {
             get => avaibleFlightVisibility;
@@ -75,6 +84,15 @@ namespace Project.ViewModel
             {
                 newsVisibility = value;
                 OnPropertyChanged(nameof(NewsVisibility));
+            }
+        }
+        public Visibility AccountInformationVisibility
+        {
+            get => accountInformationVisibility;
+            set
+            {
+                accountInformationVisibility = value;
+                OnPropertyChanged(nameof(AccountInformationVisibility));
             }
         }
         public Visibility InfoButtonVisibility
@@ -148,8 +166,8 @@ namespace Project.ViewModel
             get => accountInformation;
             set
             {
+                accountInformation = value;
                 OnPropertyChanged(nameof(AccountInformation));
-                AccountInformation = value;
             }
         }
 
@@ -161,10 +179,12 @@ namespace Project.ViewModel
         private ICommand avaibleFlightCommand;
         private ICommand newsVisibilityCommand;
         private ICommand loginUserCommand;
+        private ICommand accountInformationVisibilityCommand;
         private Visibility infoButtonVisibility;
         private Visibility loginButtonVisibility;
         private Visibility avaibleFlightVisibility;
         private Visibility newsVisibility;
+        private Visibility accountInformationVisibility;
         private int currentPage;
         private string login;
         private bool authorized = false;
@@ -176,6 +196,8 @@ namespace Project.ViewModel
             BackPageCommand = new BackPageCommand(Back);
             AvaibleFlightsCommand = new AvaibleFlightCommand(SetVisibilityFlights);
             NewsVisibilityCommand = new NewsVisibilityCommand(SetVisibilityNews);
+            AccountInformationVisibilityCommand = new AccountInformationVisibilityCommand(SetInformationVisibility);
+
             LoginUserCommand = new LoginUserCommand(this);
 
             WindowServices.IWindowService windowService = new WindowServices.WindowServices();
@@ -192,6 +214,7 @@ namespace Project.ViewModel
             NewsVisibility = Visibility.Visible;
             AvaibleFlightVisibility = Visibility.Collapsed;
             InfoButtonVisibility = Visibility.Collapsed;
+            AccountInformationVisibility = Visibility.Collapsed;
         }
         private void Next()
         {
@@ -214,18 +237,29 @@ namespace Project.ViewModel
                 currentPage--;
             }
         }
+        private void SetInformationVisibility()
+        {
+            if(NewsVisibility == Visibility.Visible || AvaibleFlightVisibility == Visibility.Visible)
+            {
+                AccountInformationVisibility = Visibility.Visible;
+                NewsVisibility = Visibility.Collapsed;
+                AvaibleFlightVisibility = Visibility.Collapsed;
+            }
+        }
         private void SetVisibilityFlights()
         {
-            if (NewsVisibility == Visibility.Visible)
+            if (NewsVisibility == Visibility.Visible || AccountInformationVisibility == Visibility.Visible)
             {
                 NewsVisibility = Visibility.Collapsed;
+                AccountInformationVisibility = Visibility.Collapsed;
                 AvaibleFlightVisibility = Visibility.Visible;
             }
         }
         private void SetVisibilityNews()
         {
-            if (AvaibleFlightVisibility == Visibility.Visible)
+            if (AccountInformationVisibility == Visibility.Visible || AvaibleFlightVisibility == Visibility.Visible)
             {
+                AccountInformationVisibility = Visibility.Collapsed;
                 AvaibleFlightVisibility = Visibility.Collapsed;
                 NewsVisibility = Visibility.Visible;
             }

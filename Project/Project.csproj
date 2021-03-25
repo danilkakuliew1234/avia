@@ -67,6 +67,7 @@
     <Compile Include="ViewModel\AccountInformationViewModel.cs" />
     <Compile Include="ViewModel\AvaibleFlightWindowViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\Commands\AccountInformationVisibilityCommand.cs" />
     <Compile Include="ViewModel\Commands\AvaibleFlightCommand.cs" />
     <Compile Include="ViewModel\Commands\BackPageCommand.cs" />
     <Compile Include="ViewModel\Commands\BuyTicketCommand.cs" />

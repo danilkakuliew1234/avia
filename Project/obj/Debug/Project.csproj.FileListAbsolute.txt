@@ -52,3 +52,32 @@ C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.g.cs
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.baml
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AccountInformation.g.cs
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AccountInformation.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\Project.exe.config
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\Project.exe
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\Project.pdb
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\LocalEntities.dll
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\LocalEntities.pdb
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\AccountInformation.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\AvailableFlightWindow.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\LoginWindow.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\MainWindow.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\News.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\App.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project_MarkupCompile.cache
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project_MarkupCompile.lref
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\AccountInformation.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\AvailableFlightWindow.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\LoginWindow.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\MainWindow.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\View\News.baml
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.g.resources
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.csproj.CopyComplete
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.exe
+C:\Users\Danya\OneDrive\Рабочий стол\avia\Project\obj\Debug\Project.pdb
