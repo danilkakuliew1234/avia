@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AuthModel.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\BuyTicket.cs" />
     <Compile Include="Model\GetNewsModel.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="ViewModel\Commands\AvaibleFlightCommand.cs" />
     <Compile Include="ViewModel\Commands\BackPageCommand.cs" />
     <Compile Include="ViewModel\Commands\BuyTicketCommand.cs" />
+    <Compile Include="ViewModel\Commands\LoginCommand.cs" />
     <Compile Include="ViewModel\Commands\LoginUserCommand.cs" />
     <Compile Include="ViewModel\Commands\NewsVisibilityCommand.cs" />
     <Compile Include="ViewModel\Commands\NextPageCommand.cs" />

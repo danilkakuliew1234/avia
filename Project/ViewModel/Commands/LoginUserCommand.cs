@@ -13,7 +13,7 @@ namespace Project.ViewModel.Commands
     {
         public event EventHandler CanExecuteChanged;
         private LoginWindow loginWindow;
-
+        private MainWindowViewModel mainWindowViewModel;
         public bool CanExecute(object parameter)
         {
             return true;
@@ -25,6 +25,7 @@ namespace Project.ViewModel.Commands
             {
                 IWindowService windowService = new WindowServices.WindowServices();
                 loginWindow = windowService.ShowWindow<LoginWindow>() as LoginWindow;
+                loginWindow.DataContext = new LoginWindowViewModel(mainWindowViewModel, loginWindow);
             }
             loginWindow.Closed += (a, e) =>
             {
@@ -32,9 +33,9 @@ namespace Project.ViewModel.Commands
                 loginWindow = null;
             };
         }
-        public LoginUserCommand()
+        public LoginUserCommand(MainWindowViewModel mainWindowViewModel)
         {
-
+            this.mainWindowViewModel = mainWindowViewModel;
         }
     }
 }

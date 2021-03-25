@@ -20,7 +20,7 @@
                 <Button Background="#00ADB5" Width="155" Content="Найти рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
             </DockPanel>
             <DockPanel Margin="0,0,0,5">
-                <Label FontFamily="Comic Sans MS">Привет, долбоеб</Label>
+                <Label Content="{Binding Login}" FontFamily="Comic Sans MS"/>
             </DockPanel>
             <Grid Height="375" Visibility="{Binding AvaibleFlightVisibility}">
                 <Grid.RowDefinitions>

@@ -7,10 +7,24 @@
         xmlns:local="clr-namespace:Project.View"
         mc:Ignorable="d"
         Title="LoginWindow" Height="300" Width="500">
-    <Window.DataContext>
-        <vM:LoginWindowViewModel/>
-    </Window.DataContext>
-    <Grid>
-        
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Width="300">
+            <DockPanel>
+                <Label Margin="0,0,8,0">Логин: </Label>
+                <TextBox Text="{Binding Login}">
+                    
+                </TextBox>
+            </DockPanel>
+            <DockPanel Margin="0,5,0,0">
+                <Label>Пароль: </Label>
+                <TextBox Text="{Binding Password}">
+
+                </TextBox>
+            </DockPanel>
+            <DockPanel Margin="0,5,0,0">
+                <Button Command="{Binding LoginCommand}" Width="100" BorderBrush="{x:Null}" Background="#00ADB5" Foreground="#ffff" Height="30px" Margin="0,0,20,0">Войти</Button>
+                <Button BorderBrush="{x:Null}" Background="#00ADB5" Foreground="#ffff" Height="30px">Регистрация</Button>
+            </DockPanel>
+        </StackPanel>
     </Grid>
 </Window>

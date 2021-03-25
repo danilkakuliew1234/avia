@@ -94,6 +94,24 @@ namespace Project.ViewModel
                 page = value;
             }
         }
+        public bool Authorized
+        {
+            get => authorized;
+            set
+            {
+                OnPropertyChanged(nameof(Authorized));
+                authorized = value;
+            }
+        }
+        public string Login
+        {
+            get => login;
+            set
+            {
+                OnPropertyChanged(nameof(Login));
+                login = value;
+            }
+        }
         private List<AvailableFlightWindow> tickets = new List<AvailableFlightWindow>();
         private AvailableFlightWindow page;
         private ICommand nextPageCommand;
@@ -104,6 +122,8 @@ namespace Project.ViewModel
         private Visibility avaibleFlightVisibility;
         private Visibility newsVisibility;
         private int currentPage;
+        private string login;
+        private bool authorized = false;
         public MainWindowViewModel()
         {
             currentPage = 0;
@@ -112,7 +132,7 @@ namespace Project.ViewModel
             BackPageCommand = new BackPageCommand(Back);
             AvaibleFlightsCommand = new AvaibleFlightCommand(SetVisibilityFlights);
             NewsVisibilityCommand = new NewsVisibilityCommand(SetVisibilityNews);
-            LoginUserCommand = new LoginUserCommand();
+            LoginUserCommand = new LoginUserCommand(this);
 
             WindowServices.IWindowService windowService = new WindowServices.WindowServices();
 
