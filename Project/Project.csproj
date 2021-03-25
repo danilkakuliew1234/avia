@@ -58,11 +58,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AccountInformationModel.cs" />
     <Compile Include="Model\AuthModel.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\BuyTicket.cs" />
     <Compile Include="Model\GetNewsModel.cs" />
     <Compile Include="Model\GetTicketsModel.cs" />
+    <Compile Include="ViewModel\AccountInformationViewModel.cs" />
     <Compile Include="ViewModel\AvaibleFlightWindowViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\Commands\AvaibleFlightCommand.cs" />
@@ -77,6 +79,9 @@
     <Compile Include="ViewModel\NewsViewModel.cs" />
     <Compile Include="ViewModel\WindowServices\IWindowService.cs" />
     <Compile Include="ViewModel\WindowServices\WindowServices.cs" />
+    <Compile Include="View\AccountInformation.xaml.cs">
+      <DependentUpon>AccountInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AvailableFlightWindow.xaml.cs">
       <DependentUpon>AvailableFlightWindow.xaml</DependentUpon>
     </Compile>
@@ -86,6 +91,10 @@
     <Compile Include="View\News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AccountInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AvailableFlightWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

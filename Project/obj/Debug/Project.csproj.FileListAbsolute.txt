@@ -50,3 +50,5 @@ C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.exe
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\Project.pdb
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.g.cs
 C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\LoginWindow.baml
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AccountInformation.g.cs
+C:\Users\Admin\Desktop\avia\Project\obj\Debug\View\AccountInformation.baml

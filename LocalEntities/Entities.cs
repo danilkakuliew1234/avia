@@ -51,4 +51,19 @@ namespace LocalEntities
         [JsonProperty("validityperiod")]
         public string ValidityPeriod { get; set; }
     }
+    public class AccountInformation
+    {
+        [JsonProperty("FirstName")]
+        public string FirstName { get; set; }
+        [JsonProperty("EndDate")]
+        public string EndDate { get; set; }
+        [JsonProperty("Name")]
+        public string  Name { get; set; }
+        [JsonProperty("AccountNumber")]
+        public string AccountNumber { get; set; }
+        [JsonProperty("CardNumber")]
+        public string CardNumber { get; set; }
+        [JsonProperty("LastName")]
+        public string LastName { get; set; }
+    }
 }

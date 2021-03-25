@@ -14,5 +14,6 @@ namespace Project.ViewModel.WindowServices
     {
         AvailableFlightWindow CreateAvaibleFlightWindow<T>(Ticket ticket) where T : Page, new();
         Window ShowWindow<T>() where T : Window, new();
+        View.AccountInformation CreateInformationAccountWindow<T>(LocalEntities.AccountInformation accountInformation) where T : Page, new();
     }
 }

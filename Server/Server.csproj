@@ -189,6 +189,7 @@
     <Compile Include="Base\Users.cs">
       <DependentUpon>Data.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\GetInfoForAccountController.cs" />
     <Compile Include="Controllers\GetTablesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InsertIntoTablesController.cs" />
@@ -310,6 +311,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocalEntities\LocalEntities.csproj">
+      <Project>{B272C101-7B9B-4715-8E71-DF27536DC3EE}</Project>
+      <Name>LocalEntities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

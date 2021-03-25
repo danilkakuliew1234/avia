@@ -8,6 +8,7 @@ using LocalEntities;
 using System.Windows.Input;
 using Project.ViewModel.Commands;
 using System.Windows;
+using Project.ViewModel.WindowServices;
 
 namespace Project.ViewModel
 {
@@ -117,13 +118,14 @@ namespace Project.ViewModel
             get => authorized;
             set
             {
+                authorized = value;
+                OnPropertyChanged(nameof(Authorized));
+
                 if (value)
                 {
                     InfoButtonVisibility = Visibility.Visible;
                     LoginButtonVisibility = Visibility.Collapsed;
                 }
-                authorized = value;
-                OnPropertyChanged(nameof(Authorized));
             }
         }
         public string Login
@@ -133,10 +135,27 @@ namespace Project.ViewModel
             {
                 login = $"Здравствуйте, {value}";
                 OnPropertyChanged(nameof(Login));
+
+                if (Authorized)
+                {
+                    IWindowService windowService = new WindowServices.WindowServices();
+                    AccountInformation = windowService.CreateInformationAccountWindow<View.AccountInformation>(new Model.AccountInformationModel().LoadInfo(value));
+                }
             }
         }
+        public View.AccountInformation AccountInformation
+        {
+            get => accountInformation;
+            set
+            {
+                OnPropertyChanged(nameof(AccountInformation));
+                AccountInformation = value;
+            }
+        }
+
         private List<AvailableFlightWindow> tickets = new List<AvailableFlightWindow>();
         private AvailableFlightWindow page;
+        private View.AccountInformation accountInformation;
         private ICommand nextPageCommand;
         private ICommand backPageCommand;
         private ICommand avaibleFlightCommand;

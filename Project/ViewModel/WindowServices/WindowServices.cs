@@ -20,6 +20,13 @@ namespace Project.ViewModel.WindowServices
             return (AvailableFlightWindow)page;
         }
 
+        public View.AccountInformation CreateInformationAccountWindow<T>(LocalEntities.AccountInformation accountInformation) where T : Page, new()
+        {
+            Page page = new T();
+            page.DataContext = new AccountInformationViewModel(accountInformation);
+            return page as View.AccountInformation;
+        }
+
         public Window ShowWindow<T>() where T : Window, new()
         {
             Window page = new T();

@@ -42,6 +42,11 @@
             </Grid>
             <Grid Visibility="{Binding NewsVisibility}">
                 <Frame Source="/Project;component/View/News.xaml">
+
+                </Frame>
+            </Grid>
+            <Grid>
+                <Frame Content="{Binding AccountInformation.Content}">
                     
                 </Frame>
             </Grid>
