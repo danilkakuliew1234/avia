@@ -14,7 +14,8 @@
         <StackPanel>
             <DockPanel Margin="0,5,0,5" Height="40px">
                 <Button Command="{Binding AvaibleFlightsCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Доступные рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
-                <Button Command="{Binding LoginUserCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Войти в аккаунт" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Visibility="{Binding LoginButtonVisibility}" Command="{Binding LoginUserCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Войти в аккаунт" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
+                <Button Visibility="{Binding InfoButtonVisibility}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Информация о аккаунте" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
                 <Button Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Моментальное бронирование" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
                 <Button Command="{Binding NewsVisibilityCommand}" Background="#00ADB5" Margin="0,0,5,0" Width="155" Content="Новости" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>
                 <Button Background="#00ADB5" Width="155" Content="Найти рейсы" BorderBrush="{x:Null}" FontFamily="Comic Sans MS"></Button>

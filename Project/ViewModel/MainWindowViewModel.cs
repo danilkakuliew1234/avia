@@ -76,6 +76,24 @@ namespace Project.ViewModel
                 OnPropertyChanged(nameof(NewsVisibility));
             }
         }
+        public Visibility InfoButtonVisibility
+        {
+            get => infoButtonVisibility;
+            set
+            {
+                infoButtonVisibility = value;
+                OnPropertyChanged(nameof(InfoButtonVisibility));
+            }
+        }
+        public Visibility LoginButtonVisibility
+        {
+            get => loginButtonVisibility;
+            set
+            {
+                loginButtonVisibility = value;
+                OnPropertyChanged(nameof(LoginButtonVisibility));
+            }
+        }
         public List<AvailableFlightWindow> Tickets
         {
             get => tickets;
@@ -99,6 +117,11 @@ namespace Project.ViewModel
             get => authorized;
             set
             {
+                if (value)
+                {
+                    InfoButtonVisibility = Visibility.Visible;
+                    LoginButtonVisibility = Visibility.Collapsed;
+                }
                 authorized = value;
                 OnPropertyChanged(nameof(Authorized));
             }
@@ -119,6 +142,8 @@ namespace Project.ViewModel
         private ICommand avaibleFlightCommand;
         private ICommand newsVisibilityCommand;
         private ICommand loginUserCommand;
+        private Visibility infoButtonVisibility;
+        private Visibility loginButtonVisibility;
         private Visibility avaibleFlightVisibility;
         private Visibility newsVisibility;
         private int currentPage;
@@ -147,6 +172,7 @@ namespace Project.ViewModel
 
             NewsVisibility = Visibility.Visible;
             AvaibleFlightVisibility = Visibility.Collapsed;
+            InfoButtonVisibility = Visibility.Collapsed;
         }
         private void Next()
         {
